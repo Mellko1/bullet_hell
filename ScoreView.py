@@ -23,7 +23,7 @@ class ScoreView(View):
 
         # renderowanie tekstow
 
-        text = pygame.font.Font(pygame.font.get_default_font(), 18)
+        text = pygame.font.Font("data/font2.ttf", 18)
         surf = text.render("Score: " + str(self.player.score), 1, (255, 255, 255))
         rect = pygame.Rect(self.rect.left + 10, self.rect.bottom - 10 - surf.get_rect().height , 0, 0)
         self.ref_engine.screen.blit(surf, rect)

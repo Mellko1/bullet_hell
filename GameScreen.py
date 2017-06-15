@@ -48,11 +48,10 @@ class GameScreen(Screen):
 
 
     def onTick(self, _clock):
-
+        super(GameScreen, self).onTick(_clock)
         self.gameView.onTick(_clock)
 
-        pygame.time.wait(15) # okolo 60 fps
-        _clock.tick()
+
 
     # renderuje czarne prostokaty na okolo widoku rozgrywki, aby przeciwnicy mogli sie za nimi "chowac"
     def renderBlackBars(self, _screen):

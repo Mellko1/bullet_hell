@@ -15,7 +15,8 @@ class Screen:
         pass
 
     def onTick(self, _clock):
-        pass
+        pygame.time.wait(15)  # okolo 60 fps
+        _clock.tick()
 
     def onScreenAvtivation(self):
         pass
@@ -28,7 +29,7 @@ class Screen:
 
         i = 0
         for option in _options:
-            text = pygame.font.Font(pygame.font.get_default_font(), 20)
+            text = pygame.font.Font("data/font2.ttf", 20)
             color = (255, 255, 255)
             if option == _chosenOption: color = (0, 255, 0)
             surf = text.render(_options[option], 1, color)

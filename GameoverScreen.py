@@ -15,7 +15,7 @@ class GameoverScreen(Screen):
     def render(self, _screen):
         _screen.fill((0, 0, 0))
 
-        text = pygame.font.Font(pygame.font.get_default_font(), 40)
+        text = pygame.font.Font("data/font2.ttf", 40)
         surf = text.render("Game Over", 1, (255, 255, 255))
 
         x = _screen.get_width()
@@ -24,7 +24,7 @@ class GameoverScreen(Screen):
         rect = pygame.Rect(x / 2 - surf.get_width() / 2, y / 2 - 100, 0, 0)
         _screen.blit(surf, rect)
 
-        text = pygame.font.Font(pygame.font.get_default_font(), 18)
+        text = pygame.font.Font("data/font2.ttf", 18)
         surf = text.render("Score: " + str(self.ref_engine.lastScore), 1, (255, 255, 255))
         rect = pygame.Rect(x / 2 - surf.get_width() / 2, y / 2 - 50, 0, 0)
         _screen.blit(surf, rect)
@@ -44,6 +44,3 @@ class GameoverScreen(Screen):
                     self.ref_engine.setActiveScreen("Gameplay")
                 elif self.opcje[self.chosenOption] == "Main Menu":
                     self.ref_engine.setActiveScreen("Menu")
-
-    def onTick(self, _clock):
-        pass
