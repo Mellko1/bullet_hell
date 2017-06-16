@@ -84,7 +84,6 @@ class Enemy(pygame.sprite.Sprite):
             elif self.shootType == ShootType.SPUN:
                 sin = math.sin(self.rect.y)
                 cos = math.cos(self.rect.y)
-                print(str(sin))
                 self.bulletAdd(_bulletList, cos, sin)
 
 
