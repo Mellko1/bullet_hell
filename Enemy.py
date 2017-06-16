@@ -11,8 +11,9 @@ class Enemy(pygame.sprite.Sprite):
     movMultiply = pygame.math.Vector2() # decyduje o kierunku i predkosci poruszania sie wrogow
     shootCounter = 0
     shootType = None
+    shootFreq = 5
 
-    def __init__(self, _imgPath, _speed, _pos, _movMultiply, _shootType):
+    def __init__(self, _imgPath, _speed, _pos, _movMultiply, _shootType, _shotFreq):
         pygame.sprite.Sprite.__init__(self)
         self.img = pygame.image.load(_imgPath)
         self.img = pygame.transform.scale(self.img, (int(0.15 * self.img.get_width()), int(0.15 * self.img.get_height())))
@@ -22,6 +23,7 @@ class Enemy(pygame.sprite.Sprite):
         self.speed = _speed
         self.movMultiply = _movMultiply
         self.shootType = _shootType
+        self.shootFreq = _shotFreq
 
     def move(self, _gameView):
         self.rect = self.rect.move(self.speed * self.movMultiply.x, self.speed * self.movMultiply.y)
@@ -32,7 +34,7 @@ class Enemy(pygame.sprite.Sprite):
 
     def shoot(self, _bulletList, _playerPos):
         self.shootCounter += 1
-        if self.shootCounter == 20:
+        if self.shootCounter == self.shootFreq:
             self.shootCounter = 0
 
             # generuje pociski z zaleznosci od typu strzalu
@@ -79,6 +81,11 @@ class Enemy(pygame.sprite.Sprite):
                                        3,
                                        pygame.math.Vector2(0, 1),
                                        8))
+            elif self.shootType == ShootType.SPUN:
+                sin = math.sin(self.rect.y)
+                cos = math.cos(self.rect.y)
+                print(str(sin))
+                self.bulletAdd(_bulletList, cos, sin)
 
 
     def bulletAdd(self, _bulletList, xDir, yDir):
@@ -97,3 +104,4 @@ class ShootType(Enum):
     EIGHTDIRECTION = 3
     AIMED = 4
     DOUBLE = 5
+    SPUN = 6

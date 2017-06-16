@@ -22,7 +22,7 @@ class GameScreen(Screen):
         self.newGame()
 
     def newGame(self):
-        self.player.rect.move_ip(400 - self.player.rect.x, 400 - self.player.rect.y)
+        self.player.rect.move_ip(self.gameView.rect.x + self.gameView.rect.width / 2 - self.player.rect.x, self.gameView.rect.y +  self.gameView.rect.height - 100 - self.player.rect.y)
         self.player.lives = 10
         self.player.score = 0
         self.player.level = 1

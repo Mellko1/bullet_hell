@@ -27,124 +27,121 @@ class Level1(Level):
             _enemyList.add(
                 Enemy("data/ship1.png", 1, (_gameViewRect.x + _gameViewRect.width / 4, _gameViewRect.y - 50),
                       pygame.math.Vector2(1, 2),
-                      ShootType.NORMAL))
+                      ShootType.NORMAL, 20))
             _enemyList.add(
                 Enemy("data/ship1.png", 1, (_gameViewRect.x + _gameViewRect.width * 3 / 4, _gameViewRect.y - 50),
                       pygame.math.Vector2(-1, 2),
-                      ShootType.NORMAL))
+                      ShootType.NORMAL, 20))
             self.spawned = 1
 
         if self.passedSeconds == 10 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/spiked ship 3.png", 1, (_gameViewRect.x + _gameViewRect.width / 4, _gameViewRect.y - 50), pygame.math.Vector2(0, 2),
-                      ShootType.DOUBLE))
+                      ShootType.DOUBLE, 20))
             _enemyList.add(
                 Enemy("data/spiked ship 3.png", 1, (_gameViewRect.x + _gameViewRect.width * 3 / 4, _gameViewRect.y - 50), pygame.math.Vector2(0, 2),
-                      ShootType.DOUBLE))
+                      ShootType.DOUBLE, 20))
             self.spawned = 1
 
         if self.passedSeconds == 11 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/ship2.png", 1, (_gameViewRect.x + _gameViewRect.width / 4, _gameViewRect.y - 50), pygame.math.Vector2(0, 2),
-                      ShootType.AIMED))
+                      ShootType.AIMED, 20))
             _enemyList.add(
                 Enemy("data/ship2.png", 1, (_gameViewRect.x + _gameViewRect.width * 3 / 4, _gameViewRect.y - 50), pygame.math.Vector2(0, 2),
-                      ShootType.AIMED))
+                      ShootType.AIMED, 20))
             self.spawned = 1
 
         if self.passedSeconds == 12 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/spiked ship 3.png", 1, (_gameViewRect.x + _gameViewRect.width / 4, _gameViewRect.y - 50), pygame.math.Vector2(0, 2),
-                      ShootType.DOUBLE))
+                      ShootType.DOUBLE, 20))
             _enemyList.add(
                 Enemy("data/spiked ship 3.png", 1, (_gameViewRect.x + _gameViewRect.width * 3 / 4, _gameViewRect.y - 50), pygame.math.Vector2(0, 2),
-                      ShootType.DOUBLE))
+                      ShootType.DOUBLE, 20))
             self.spawned = 1
 
 
         if self.passedSeconds == 15 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/ship5.png", 1, (_gameViewRect.x + _gameViewRect.width / 5, _gameViewRect.y - 50), pygame.math.Vector2(0, 1),
-                      ShootType.FOURDIRECTION))
+                      ShootType.FOURDIRECTION, 20))
             _enemyList.add(
                 Enemy("data/ship5.png", 1, (_gameViewRect.x + _gameViewRect.width * 4 / 5, _gameViewRect.y - 50), pygame.math.Vector2(0, 1),
-                      ShootType.FOURDIRECTION))
+                      ShootType.FOURDIRECTION, 20))
             self.spawned = 1
 
         if self.passedSeconds == 20 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/ship1.png", 1, (_gameViewRect.x + _gameViewRect.width / 2, _gameViewRect.y - 50), pygame.math.Vector2(0, 1),
-                      ShootType.EIGHTDIRECTION))
+                      ShootType.EIGHTDIRECTION, 20))
             self.spawned = 1
 
         if self.passedSeconds == 25 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/spiked ship 3.png", 1, (0, _gameViewRect.y - 50),
                       pygame.math.Vector2(4, 1),
-                      ShootType.DOUBLE))
+                      ShootType.DOUBLE, 20))
             _enemyList.add(
                 Enemy("data/spiked ship 3.png", 1, (_gameViewRect.width, _gameViewRect.y - 50),
                       pygame.math.Vector2(-4, 1),
-                      ShootType.DOUBLE))
+                      ShootType.DOUBLE, 20))
             self.spawned = 1
 
         if self.passedSeconds == 30 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/ship2.png", 1, (0, _gameViewRect.y - 50),
                       pygame.math.Vector2(3, 1),
-                      ShootType.AIMED))
+                      ShootType.AIMED, 20))
             self.spawned = 1
 
         if self.passedSeconds == 32 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/ship2.png", 1, (0, _gameViewRect.y - 50),
                       pygame.math.Vector2(3, 1),
-                      ShootType.AIMED))
+                      ShootType.AIMED, 20))
             self.spawned = 1
 
         if self.passedSeconds == 34 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/ship2.png", 1, (0, _gameViewRect.y - 50),
                       pygame.math.Vector2(3, 1),
-                      ShootType.AIMED))
+                      ShootType.AIMED, 20))
             self.spawned = 1
 
         if self.passedSeconds == 36 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/ship2.png", 1, (0, _gameViewRect.y - 50),
                       pygame.math.Vector2(3, 1),
-                      ShootType.AIMED))
+                      ShootType.AIMED, 20))
             self.spawned = 1
 
         if self.passedSeconds == 38 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/ship2.png", 1, (0, _gameViewRect.y - 50),
                       pygame.math.Vector2(3, 1),
-                      ShootType.AIMED))
+                      ShootType.AIMED, 20))
             self.spawned = 1
 
         if self.passedSeconds == 45 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/ship5.png", 1, (_gameViewRect.x + _gameViewRect.width / 4, _gameViewRect.y - 50),
                       pygame.math.Vector2(0, 1),
-                      ShootType.FOURDIRECTION))
+                      ShootType.FOURDIRECTION, 20))
 
             _enemyList.add(
                 Enemy("data/ship5.png", 1, (_gameViewRect.x + _gameViewRect.width * 3 / 4, _gameViewRect.y - 50),
                       pygame.math.Vector2(0, 2),
-                      ShootType.FOURDIRECTION))
+                      ShootType.FOURDIRECTION, 20))
             self.spawned = 1
 
         if self.passedSeconds == 50 and self.spawned == 0:
             _enemyList.add(
                 Enemy("data/ship1.png", 1, (_gameViewRect.width, _gameViewRect.y - 50),
                       pygame.math.Vector2(-2, 1),
-                      ShootType.EIGHTDIRECTION))
-            self.spawned = 1
-
-        if self.passedSeconds == 50 and self.spawned == 0:
+                      ShootType.EIGHTDIRECTION, 20))
             _enemyList.add(
                 Enemy("data/ship1.png", 1, (_gameViewRect.width, _gameViewRect.y - 50),
                       pygame.math.Vector2(-2, 1),
-                      ShootType.EIGHTDIRECTION))
+                      ShootType.SPUN, 1))
             self.spawned = 1
